@@ -1,13 +1,16 @@
-<form action="{{ route('store') }}" method="post" enctype="multipart/form-data">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<form action="{{ route('posts.store') }}" method="post" enctype="multipart/form-data">
     @csrf
     <div style="margin-bottom: 10px;">
         <label>Title: </label>
-        <input type="text" name="name" required style="width: 100%;">
-    </div>
-
-    <div style="margin-bottom: 10px;">
-        <label>Slug: </label>
-        <input type="text" name="slug" required style="width: 100%;">
+        <input type="text" name="title" required style="width: 100%;">
     </div>
 
     <div style="margin-bottom: 10px;">
@@ -40,3 +43,5 @@
 
     <button type="submit" style="width: 20%; background-color: #4CAF50; color: white; padding: 10px;">Create Post</button>
 </form>
+</body>
+</html>
